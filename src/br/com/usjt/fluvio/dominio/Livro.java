@@ -29,13 +29,13 @@ public class Livro {
 
     }
 
-    public Livro(String titulo, String autor, int paginas, double preco, int numeroDaEdicao, int emprestado, Date anoDePublicacao, String editora) {
+    public Livro(String titulo, String autor, int paginas, double preco, int numeroDaEdicao, /*int emprestado,*/ Date anoDePublicacao, String editora) {
         this.titulo = getTitulo();
         this.autor = getAutor();
         this.paginas = getPaginas();
         this.preco = getPreco();
         this.numeroDaEdicao = getNumeroDaEdicao();
-        this.emprestado = getEmprestado();
+        //this.emprestado = getEmprestado();
         this.anoDePublicacao = getAnoDePublicacao();
         this.editora = getEditora();
     }
@@ -139,6 +139,16 @@ public class Livro {
                 ", emprestado=" + emprestado +
                 ", anoDePublicacao=" + anoDePublicacao +
                 '}';
+    }
+
+    public String dadosDoLivro( )
+    {
+        return "Título: " + titulo + "\nAutor: " + autor +
+                "\nPáginas: " + paginas + "\nPreço: R$ " + preco +
+                "\nNúmero da Edição: " + numeroDaEdicao +
+                "\nEmprestado: " + emprestado + " vez(es)" +
+                "\nAno de Publicação: " + anoDePublicacao +
+                "\nEditora: " + editora;
     }
 
     public double precoComDesconto(int indiceDoUsuario){

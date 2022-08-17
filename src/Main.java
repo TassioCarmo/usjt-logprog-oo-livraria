@@ -1,19 +1,25 @@
 import br.com.usjt.fluvio.dominio.Emprestimo;
+import br.com.usjt.fluvio.dominio.Livraria;
 import br.com.usjt.fluvio.dominio.Livro;
 import br.com.usjt.fluvio.dominio.Usuario;
 
 public class Main {
     public static void main(String[] args) {
 
-        Livro livro = new Livro();
-        Livro livro2 = new Livro();
-        Livro livro3 = new Livro();
+        Livraria livraria = new Livraria();
 
-        Usuario usuario = new Usuario();
-        Usuario usuario2 = new Usuario();
-        Usuario usuario3 = new Usuario();
+        /*ivraria.cadastrarLivro("Harry Poter","Dani", 700, 89.90, 99, 1994,"abril");
+        livraria.cadastrarLivro("King","Dani", 800, 89.90, 99, 1894,"2k");
+        livraria.cadastrarLivro("Ring","RR", 2700, 89.90, 99, 1794,"Boss");
+        */
+        livraria.exibirAcervo();
 
-        //Emprestimo emprestimo = new Emprestimo(livro,usuario,10/11/2022);
+        //System.out.println(biblioteca.valorDoAcervo());
+        System.out.println(livraria.quantidadeDeLivros());
+
+        livraria.removerLivro("King");
+
+        System.out.println(livraria.quantidadeDeLivros());
 
 
     }
