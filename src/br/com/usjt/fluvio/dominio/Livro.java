@@ -41,7 +41,11 @@ public class Livro {
     }
 
     public void setPaginas(int paginas) {
-        this.paginas = paginas;
+        if (paginas < 0){
+            System.out.println("Numero de paginas não pode ser negativo");
+        }else {
+            this.paginas = paginas;
+        }
     }
 
     public double getPreco() {
@@ -49,7 +53,11 @@ public class Livro {
     }
 
     public void setPreco(double preco) {
-        this.preco = preco;
+        if (preco < 0){
+            System.out.println("Preço não pode ser negativo");
+        }else {
+            this.preco = preco;
+        }
     }
 
     public int getNumeroDaEdicao() {
@@ -57,7 +65,11 @@ public class Livro {
     }
 
     public void setNumeroDaEdicao(int numeroDaEdicao) {
-        this.numeroDaEdicao = numeroDaEdicao;
+        if(numeroDaEdicao < 0){
+            System.out.println("Numero da Edição não pode ser negativo");
+        }else {
+            this.numeroDaEdicao = numeroDaEdicao;
+        }
     }
 
     public int getEmprestado() {
