@@ -212,7 +212,9 @@ public class Livro {
                 break;
             case 5: setPaginas(Integer.parseInt(JOptionPane.showInputDialog("Digite o numero de paginas.")) );
                 break;
-            case 6: setEmprestado() ;
+            case 6: JOptionPane.showMessageDialog( null, "Adiciona emprestimo +1");
+
+                setEmprestado() ;
                 break;
             case 7:
                 String retorno = JOptionPane.showInputDialog("Digite o ano de publicação.");
