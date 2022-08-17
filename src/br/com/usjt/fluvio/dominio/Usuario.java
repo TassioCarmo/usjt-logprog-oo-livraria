@@ -17,10 +17,10 @@ public class Usuario {
     }
 
     public Usuario(String nome, int numeroDeMatricula, int idade, String cpf) {
-        this.nome = nome;
-        this.numeroDeMatricula = numeroDeMatricula;
-        this.idade = idade;
-        this.cpf = cpf;
+        this.nome = getNome();
+        this.numeroDeMatricula = getNumeroDeMatricula();
+        this.idade = getIdade();
+        this.cpf = getCpf();
     }
 
     public String getNome() {
@@ -61,6 +61,35 @@ public class Usuario {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
+    }
+
+    public String maiorOuMenor(){
+        if(idade >= 18){
+            return "Maior de idade";
+        }else
+            return "Menor de idade";
+    }
+
+    public boolean ehPar(){
+        if(numeroDeMatricula % 2 == 0){
+            return true;
+        }else
+            return false;
+    }
+
+    public  String classificarUsuario(){
+        if(numeroDeMatricula < 1000 && idade > 25){
+            return "Usuário Sênior";
+        } else if (numeroDeMatricula >= 1001 && numeroDeMatricula < 10000 && idade >= 18 && idade <= 24) {
+            return "Usuário Júnior";
+        }else
+            return "Usuário Calouros";
+    }
+
+    public  String geraLogin(){
+        return nome.substring(0,4) + idade;
+
+
     }
 
     @Override

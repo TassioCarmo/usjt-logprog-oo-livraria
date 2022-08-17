@@ -20,6 +20,15 @@ public class Livro {
 
     }
 
+    public Livro(String titulo, String autor, int paginas, double preco, int numeroDaEdicao, int emprestado) {
+        this.titulo = getTitulo();
+        this.autor = getAutor();
+        this.paginas = getPaginas();
+        this.preco = getPreco();
+        this.numeroDaEdicao = getNumeroDaEdicao();
+        this.emprestado = getEmprestado();
+    }
+
     public String getTitulo() {
         return titulo;
     }
@@ -101,5 +110,18 @@ public class Livro {
                 ", numeroDaEdicao=" + numeroDaEdicao +
                 ", emprestado=" + emprestado +
                 '}';
+    }
+
+    public double precoComDesconto(int num){
+        if (num == 1){
+            return preco-(preco * 0.3);
+        } else if (num == 2) {
+            return preco-(preco * 0.2);
+        }else
+            return this.preco;
+    }
+
+    public double precoComDescontoNaSorte(){
+        return preco-(preco * Math.random());
     }
 }
