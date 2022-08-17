@@ -1,4 +1,5 @@
 package br.com.usjt.fluvio.dominio;
+import javax.swing.JOptionPane;
 
 public class Usuario {
 
@@ -101,4 +102,61 @@ public class Usuario {
                 ", cpf='" + cpf + '\'' +
                 '}';
     }
+
+    public void chamarMetodosDeAcesso( int indiceDoMetodo ){
+        switch (indiceDoMetodo){
+            case 1: getNome() ;
+                break;
+            case 2: getNumeroDeMatricula() ;
+                break;
+            case 3: getIdade() ;
+                break;
+            case 4: getCpf() ;
+                break;
+            default: System.out.println("Operação inexistente");
+        }
+    }
+
+    /*public void chamarMetodosDeAcesso(int indiceDoMetodo){
+        if (indiceDoMetodo == 1){
+            getAutor();
+        }else if (indiceDoMetodo == 2){
+            getNome();
+        }else if (indiceDoMetodo == 3){
+           getIdade();
+        }else if (indiceDoMetodo == 4){
+            getCpf();
+        }else {
+            System.out.println("Operação inexistente");
+        }
+
+
+    }*/
+
+    /*public void chamarModificadores( int indiceDoMetodo ){
+        switch (indiceDoMetodo){
+            case 1: setNome( JOptionPane.showMessageDialog("Digite o nome do autor.") );
+                break;
+            case 2: setNumeroDeMatricula(JOptionPane.showMessageDialog("Digite o nome do titulo.") );
+                break;
+            case 3: setIdade(JOptionPane.showMessageDialog("Digite o numero da edição.") );
+                break;
+            case 4: setCpf(JOptionPane.showMessageDialog("Digite o valor do preço.") );
+                break;
+            default: System.out.println("Operação inexistente");
+        }
+    }*/
+
+    /*public void chamarModificadores(int indiceDoMetodo){
+        if (indiceDoMetodo == 1){
+            setNome( JOptionPane.showMessageDialog("Digite o nome do autor.") );
+        }else if (indiceDoMetodo == 2){
+            setNumeroDeMatricula(JOptionPane.showMessageDialog("Digite o nome do titulo.") );
+        }else if (indiceDoMetodo == 3){
+           setIdade(JOptionPane.showMessageDialog("Digite o numero da edição.") );
+        }else if (indiceDoMetodo == 4){
+            setCpf(JOptionPane.showMessageDialog("Digite o valor do preço.") );
+        }else {
+            System.out.println("Operação inexistente");
+        }*/
 }
